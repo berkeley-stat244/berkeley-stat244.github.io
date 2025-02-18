@@ -1,4 +1,4 @@
-name: Update website
+name: "Update website from SIS"
 
 on:
   workflow_dispatch:
