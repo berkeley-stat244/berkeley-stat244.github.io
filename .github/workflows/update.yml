@@ -6,8 +6,6 @@ on:
     - cron: "5 2 1 * *"
   #push:
   #  branches: [ "main" ]
-  #pull_request:
-  #  branches: [ "main" ]
 
 permissions:
   contents: write
@@ -32,6 +30,16 @@ jobs:
             pip install -r .github/scripts/requirements.txt
         fi
 
+    - name: Configure git identity
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_NAME: ${{ vars.GIT_NAME }}
+        GIT_EMAIL: ${{ vars.GIT_EMAIL }}
+      run: |
+        git config --global user.name "${GIT_NAME}"
+        git config --global user.email "${GIT_EMAIL}"
+
+    - name: Check for changes
     - name: Run script
       env:
         SIS_COURSE_API_ID: ${{ secrets.SIS_COURSE_API_ID }}
@@ -49,19 +57,6 @@ jobs:
           --google-analytics-tag=${GOOGLE_ANALYTICS_TAG} \
           --course-data-file=${COURSE_DATA_FILE}
 
-    - name: Configure git identity
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GIT_NAME: ${{ vars.GIT_NAME }}
-        GIT_EMAIL: ${{ vars.GIT_EMAIL }}
-      run: |
-        git config --global user.name "${GIT_NAME}"
-        git config --global user.email "${GIT_EMAIL}"
-
-    - name: Stage changes
-      run: git add .
-
-    - name: Check for changes
       id: git-check
       run: |
         git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
@@ -71,5 +66,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        git add .
         git commit -m "Update via GitHub Actions."
         git push
