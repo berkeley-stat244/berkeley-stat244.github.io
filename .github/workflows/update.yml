@@ -39,7 +39,6 @@ jobs:
         git config --global user.name "${GIT_NAME}"
         git config --global user.email "${GIT_EMAIL}"
 
-    - name: Check for changes
     - name: Run script
       env:
         SIS_COURSE_API_ID: ${{ secrets.SIS_COURSE_API_ID }}
