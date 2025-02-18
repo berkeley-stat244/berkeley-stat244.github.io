@@ -13,9 +13,10 @@
 # you will see them accessed via \{\{ site.title \}\}, \{\{ site.github_repo \}\}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via \{\{ site.myvariable \}\}.
-title: "Stat 244: Statistical Computing"
+title: "Stat 244: Computing for Statistics and Data Science with Julia"
 tagline: Course Overview
-description: "Algorithms in statistical computing: random number generation, generating other distributions, random sampling and permutations. Matrix computations in linear models. Non-linear optimization with applications to statistical procedures. Other topics of current interest, such as issues of efficiency, and use of graphics. "
+description: "Programming and computation for applications in statistics, data science and related fields, focusing on the use of Julia, a modern language that offers interactivity with high performance based on just-in-time compilation. The course will also cover the use of co-processors, in particular GPUs, through Julia and Python packages such as Jax and PyTorch. Topics will include data types, functional programming, multiple argument dispatch, memory use, efficiency, parallelization, robustness and testing. 
+"
 author: "SCF"
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://stat244.berkeley.edu'

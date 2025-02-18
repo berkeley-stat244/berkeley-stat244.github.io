@@ -1,14 +1,14 @@
 ---
 layout: home
-title: "Stat 244: Statistical Computing"
+title: "Stat 244: Computing for Statistics and Data Science with Julia"
 nav_exclude: true
 permalink: /:path/
 seo:
   type: Course
-  name: "Stat 244: Statistical Computing"
+  name: "Stat 244: Computing for Statistics and Data Science with Julia"
 ---
 
-# Stat 244: Statistical Computing
+# Stat 244: Computing for Statistics and Data Science with Julia
 {: .mb-2 }
 UC Berkeley
 {: .mb-0 .fs-6 .text-grey-dk-000 }
@@ -24,12 +24,13 @@ UC Berkeley
 
 ## Overview
 
-Algorithms in statistical computing: random number generation, generating other distributions, random sampling and permutations. Matrix computations in linear models. Non-linear optimization with applications to statistical procedures. Other topics of current interest, such as issues of efficiency, and use of graphics. 
+Programming and computation for applications in statistics, data science and related fields, focusing on the use of Julia, a modern language that offers interactivity with high performance based on just-in-time compilation. The course will also cover the use of co-processors, in particular GPUs, through Julia and Python packages such as Jax and PyTorch. Topics will include data types, functional programming, multiple argument dispatch, memory use, efficiency, parallelization, robustness and testing. 
+
 
 ## Logistics
 
-Three hours of Lecture and  Two hours of Laboratory per week for 15 weeks.
+Three hours of lecture per week for seven weeks. 
 
 ## Prerequisites
 
-Knowledge of a higher level programming language. 
+Statistics 243 or Statistics 215A or equivalent background of (1) extensive experience with a language such as Python or R, (2) basic familiarity with programming concepts such as functional programming, object-oriented programming, variable scope, memory use, and data structures, and (3) familiarity with the basics of parallel processing.
