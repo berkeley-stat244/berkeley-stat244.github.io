@@ -2,6 +2,8 @@ name: Update website
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "5 2 1 * *"
   #push:
   #  branches: [ "main" ]
   #pull_request:
