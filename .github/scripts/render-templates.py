@@ -193,6 +193,9 @@ async def main():
         args.catalog_number,
     )
 
+    if args.verbose:
+        print(f"{data=}")
+
     # Read data from local file if it exists
     override_data = None
     if args.course_data_file:
