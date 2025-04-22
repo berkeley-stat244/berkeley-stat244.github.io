@@ -27,7 +27,6 @@ async def get_course_data(app_id, app_key, subject_area, catalog_number):
     data = await course.get_current_courses(app_id, app_key, **params)
     if len(data) == 0:
         raise Exception(f"Could not find SIS data for {params=}.")
-
     return data[0]
 
 
