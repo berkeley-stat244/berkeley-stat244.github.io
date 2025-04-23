@@ -1,0 +1,27 @@
+name: "Update website using SIS data"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 2 1 * *"
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  call-update-workflow:
+    uses: berkeley-scf/course-overview/.github/workflows/update.yml@main
+    with:
+      SIS_SUBJECT_AREA: ${{ vars.SIS_SUBJECT_AREA }}
+      SIS_CATALOG_NUMBER: ${{ vars.SIS_CATALOG_NUMBER }}
+      AUTHOR: ${{ vars.AUTHOR }}
+      GOOGLE_ANALYTICS_TAG: ${{ vars.GOOGLE_ANALYTICS_TAG }}
+      COURSE_DATA_FILE: ${{ vars.COURSE_DATA_FILE }}
+      GIT_NAME: ${{ vars.GIT_NAME }}
+      GIT_EMAIL: ${{ vars.GIT_EMAIL }}
+    secrets:
+      SIS_COURSE_API_ID: ${{ secrets.SIS_COURSE_API_ID }}
+      SIS_COURSE_API_KEY: ${{ secrets.SIS_COURSE_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
