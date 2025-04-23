@@ -24,4 +24,4 @@ jobs:
     secrets:
       SIS_COURSE_API_ID: ${{ secrets.SIS_COURSE_API_ID }}
       SIS_COURSE_API_KEY: ${{ secrets.SIS_COURSE_API_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CALLER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
