@@ -23,7 +23,7 @@ url: 'https://stat244.berkeley.edu'
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 logo: 'resources/logo.png'
 
-ga_tracking: "G-JV4XK0TLHB"
+ga_tracking: "G-"
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.10.1
